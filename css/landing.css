@@ -1,0 +1,547 @@
+/* MAIN_LANDING_PAGE_SECTION */
+
+/*================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================*/
+
+/* Main_landing_page */
+
+/* Table of content 
+*) Home section
+*) How_it_works_section
+*) Featured_cities
+*) parking_type
+*) main_features
+*) textimonal_card
+*) Modal
+*) Media query
+
+/* General css */
+
+/*=================================================================================================================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body
+{
+	font-family: 'Exo 2', sans-serif;
+}
+.app_screen_outer  h1
+{
+	font-family: 'Ubuntu', sans-serif;
+    font-size: 31px;
+    margin-top: 0px;
+	line-height: 41px;
+	margin-bottom: 28px;
+}
+.app_screen_outer  a,
+.app_screen_outer  a:hover, .app_screen_outer  a:active,.app_screen_outer  a:focus,.app_screen_outer  a:visited
+{
+	color:#000;
+	text-decoration: none;
+}
+.app_screen_outer   .navbar-default .navbar-nav > li > a
+{
+	color: #fff;
+	text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    font-size: 16px;
+}
+.app_screen_outer  .navbar-default .navbar-brand:focus,
+.app_screen_outer  .navbar-default .navbar-brand:hover,
+.app_screen_outer  .navbar-default .navbar-brand
+{
+	color: #fff;
+}
+.app_screen_outer .hide_me
+{
+	 opacity:0;
+}
+.app_screen_outer .visible{
+	 opacity:1;
+}
+.app_screen_outer footer  .icon_cls i
+{
+	padding: 0px 10px;
+	font-size: 18px;
+	transition: all 0.5s ease-in;
+	-webkit-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	-ms-border-radius: all 0.5s ease-in;
+	-moz-border-radius: all 0.5s ease-in;
+	cursor: pointer;
+}
+.app_screen_outer footer  .icon_cls i:hover
+{
+	color:#6c68b1;
+	
+}
+.app_screen_outer  footer
+{
+	background-color: #252525;
+	color:#fff;
+	padding-top:30px;
+}
+.app_screen_outer  footer .footer_titles
+{
+	margin:15px 0px;
+}
+.app_screen_outer  footer .copy_rights
+{
+	background:#222222;
+	padding:15px;
+}
+.app_screen_outer  footer .copy_rights p
+{
+	margin:0px;
+}
+.app_screen_outer  footer  .icon_cls i
+{
+	padding: 0px 10px;
+	font-size: 18px;
+	
+}
+/* home section */
+
+/*=================================================================================================================================================*/
+
+.app_screen_outer .video-section #video-background 
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+.app_screen_outer  .video-section
+{
+	position: relative;
+	min-height: 800px;
+	font-family: 'Ubuntu', sans-serif;
+	/*background-image: url("https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg");
+	background-size: cover;
+	background-position: center center;*/
+}
+.app_screen_outer  .video-section h1
+{
+	font-size: 41px;
+    margin-top: 0px;
+	max-width: 700px;
+    margin: 0px auto;
+    line-height: 59px;
+	letter-spacing: 2px;
+	
+}
+.app_screen_outer  .video-section p.lead
+{
+	margin-top: 20px;
+}
+.app_screen_outer  .video-section .navbar
+{
+	position: relative;
+    z-index: 2;
+    background: transparent !important;
+	border-bottom: none !important;
+}
+.app_screen_outer  .video-section  .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+    z-index: 2;
+	color:#fff;
+	display: table;
+	height: 600px;
+	overflow: hidden;
+}
+.app_screen_outer  .video-section  .header-content .inner
+{
+	display: table-cell;
+	vertical-align: middle;
+	
+}
+.navbar-nav>li>a, .navbar-brand
+{
+	font-size: 18px;
+	font-weight: 600;
+}
+/* how_it_works_section */
+
+/*=================================================================================================================================================*/
+
+
+.app_screen_outer .how_it_works_section
+{
+	padding:50px 0px;
+	
+}
+.app_screen_outer .how_it_works_section h1
+{
+	 font-family: 'Ubuntu', sans-serif;
+	 font-size: 32px;
+	 margin-top: 0px;
+}
+.app_screen_outer .how_it_works_section  .app_screen_features
+{
+	height: 600px;
+	overflow:hidden;
+	border-bottom: 3px solid #f1f1f1;
+	padding-top:4em;
+	margin-bottom: 7em;
+}
+.app_screen_outer .how_it_works_section  .app_screen_features:last-child
+{
+	margin-bottom: 1em;
+}
+.app_screen_outer .how_it_works_section  .app_screen_features  .fa
+{
+	color: #6c68b1;
+}
+.app_screen_outer .how_it_works_section  .features_heading_outer
+{
+	height:500px;
+	display:table;
+}
+.app_screen_outer .how_it_works_section .features_heading_inner
+{
+	display: table-cell;
+	vertical-align:middle;
+}
+.app_screen_outer .how_it_works_section .features_heading_inner hr
+{
+	border:1px solid #555;
+	max-width:50px;
+	margin:0px;
+}
+
+.app_screen_outer .how_it_works_section .features_heading_inner p.lead
+{
+	padding-top: 10px;
+	line-height: 33px;
+	opacity: 0.78;
+}
+
+.app_screen_outer .how_it_works_section .features_screen_img figure>img
+{
+	max-width: 348px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+	-ms-border-radius: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+	-o-border-radius: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+	-moz-border-radius: 0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+}
+.app_screen_outer .how_it_works_section .features_screen_img .img-responsive
+{
+	display: inline-block;
+}
+.app_screen_outer .how_it_works_section  .text-right-img
+{
+	text-align: right
+}
+
+
+/* Featured_cities */
+
+/*=================================================================================================================================================*/
+
+.app_screen_outer .featured_cities,
+.app_screen_outer .testimonals
+{
+	
+    padding: 50px 0px;
+}
+.app_screen_outer .featured_cities .featured_cities_outer 
+{
+	margin: 30px 0px;
+	box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+	-webkit-border-radius: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+	-ms-border-radius: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+	-o-border-radius: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+	-moz-border-radius: 0px 2px 10px -1px rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+}
+
+.app_screen_outer .featured_cities .featured_cities_outer .featured_cities_image .img-responsive
+{
+	display: inline-block;
+	min-height: 240px;
+	position: relative;
+
+}
+
+.app_screen_outer .featured_cities .featured_cities_outer .text_box
+{
+	padding:25px;
+	border:1px solid #ddd;
+	border-top: none;
+}
+.app_screen_outer .featured_cities .featured_cities_outer .text_box h3
+{
+	margin:0px;
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	-ms-border-radius: all 0.2s ease-in;
+	-moz-border-radius: all 0.2s ease-in;
+}
+.app_screen_outer .featured_cities .featured_cities_outer:hover .text_box h3
+{
+	letter-spacing: 2px;
+}
+
+/* Parking_type */
+
+/*=================================================================================================================================================*/
+
+.app_screen_outer .parking_type,
+.app_screen_outer  .download_app_section
+{
+	 padding: 50px 0px;
+	 background: #f8f8f8;
+}
+.app_screen_outer .parking_type .parking_btn
+{
+	border: 1px solid #ddd;
+    padding: 13px 60px;
+    font-size: 22px;
+    margin: 30px;
+    background: #6c68b1;
+    color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/* main_features */
+
+/*=================================================================================================================================================*/
+
+.app_screen_outer .main_features
+{
+	background-image: url("../images/bayshore.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-attachment: fixed;
+	min-height: 500px;
+	position: relative;
+}
+.app_screen_outer .main_features_overlay
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background:rgba(0,0,140,0.3);
+	z-index:1;
+	
+}
+.app_screen_outer .main_features h1
+{
+	color: #fff;
+	margin:0px;
+	position: relative;
+	z-index: 2;
+	padding: 20px;
+	padding-top: 50px;	
+}
+.app_screen_outer .main_features_card
+{
+	background: #fff;
+	padding:20px;
+	position: relative;
+	z-index: 2;
+	min-height: 200px;
+	border-radius:4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	margin: 30px 0px;
+	    -webkit-transition: box-shadow .2s cubic-bezier(.15,.69,.83,.67);
+    transition: box-shadow .2s cubic-bezier(.15,.69,.83,.67);
+}
+.app_screen_outer .main_features_card:hover
+{
+	    box-shadow: 0 2px 15px 5px rgba(0,0,0,.2);
+    -webkit-transition: box-shadow .2s cubic-bezier(.15,.69,.83,.67);
+    transition: box-shadow .2s cubic-bezier(.15,.69,.83,.67);
+}
+.app_screen_outer .main_features_card .fa
+{
+	margin: 10px;
+    color: #6c68b1;
+}
+.app_screen_outer .main_features_card p.lead
+{
+	margin-top: 15px;
+    line-height: 33px;
+}
+
+/* textimonal_card */
+
+/*=================================================================================================================================================*/
+
+.testimonals .textimonal_card blockquote
+{
+	border: 1px solid #6c68b1;
+    border-radius: 6px;
+    padding: 25px;
+    margin-top: 25px;
+	margin-bottom: 0px;
+
+}
+.testimonals .textimonal_card span.glyphicon
+{
+	top: -6px;
+    color: #6c68b1;
+    left: 1em;
+    font-size: 20px;
+}
+.testimonals .textimonal_card .media .media-object img
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+}
+.testimonals .textimonal_card .media .media-body h4
+{
+	margin-left: 10px;
+	margin-top: 17px;
+    font-weight: 600;
+}
+
+/*Modal */
+
+/*=================================================================================================================================================*/
+
+ .modal-title
+ {
+	font-weight: 800;
+	font-family: 'Ubuntu', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+ }
+  #request_modal .btn-request
+ {
+	background: #1d1d1d;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    font-weight: 500;
+	color:#fff;
+ }
+ #request_modal .btn
+ {
+	 border-radius: 0px;
+	 outline: none;
+ }
+
+/* Media query */
+
+/*=================================================================================================================================================*/
+
+ @media(max-width: 991px)
+ {
+	
+	.app_screen_outer .how_it_works_section  .features_heading_outer
+	{
+		height: auto;
+		display: initial;
+	}
+	.app_screen_outer .how_it_works_section  .text-right-img
+	{
+		text-align: center;
+	}
+	
+	.app_screen_outer .how_it_works_section .features_screen_img figure>img
+	{
+		max-width: 100%;
+	}
+	.app_screen_outer  .video-section
+	{
+		min-height: 700px;
+	}
+ }
+ @media(max-width: 768px)
+ {
+	.app_screen_outer .how_it_works_section  .app_screen_features
+	{
+		overflow:auto;
+		border-bottom:none;
+		height: auto;
+		text-align: center;
+		padding-top:10px;
+		margin-bottom:20px;
+	}
+	.app_screen_outer .features_heading_inner
+	{
+		display: block !important;
+		vertical-align: initial !important;
+	}
+	.app_screen_outer .how_it_works_section .features_heading_inner hr
+	{
+		margin:0px auto;
+	}
+	.app_screen_outer .how_it_works_section .features_heading_inner:nth-child(odd)
+	{
+		margin-top:30px;
+	}
+	 .app_screen_outer .how_it_works_section .features_heading_inner:nth-child(even)
+	{
+		margin-bottom: 30px;
+	}
+ }
+ @media(max-width: 530px)
+ {
+	 .app_screen_outer .video-section h1
+	 {
+		font-size: 32px;
+		line-height: 51px;
+	 }
+	 .app_screen_outer .video-section p.lead
+	 {
+		font-weight: 600;
+	 }
+	 .app_screen_outer .video-section
+	 {
+		background-image: url("http://eskipaper.com/images/bmw-m3-car-white-parking-1.jpg");
+		background-size: cover;
+		background-position: center center;
+	 }
+	 .app_screen_outer .video-section #video-background
+	 {
+		 display: none;
+	 }
+	 .app_screen_outer .parking_type .parking_btn:last-child
+	 {
+		 margin: 0px;
+	 }
+	 .app_screen_outer .featured_cities .featured_cities_outer
+	 {
+		 margin: 10px 0px;
+	 }
+ }
+ @media(max-width: 768px)
+ {
+	 
+	.hide_me
+	{
+		opacity: 1 !important;
+	}
+	.animated {
+    -webkit-animation-duration: 0s !important;
+    animation-duration: 0 !important;
+    -webkit-animation-fill-mode: none !important;
+    animation-fill-mode: noe !important;
+	-webkit-animation-play-state:paused !important;
+	animation-play-state:paused !important;
+	}
+ }

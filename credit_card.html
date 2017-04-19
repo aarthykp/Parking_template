@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add card info</title>
+		
+		<!--External css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/build.css">
+		<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+		<!--Google font-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+		<style>
+			body
+			{
+				font-family: 'Montserrat', sans-serif;
+				background: #f8f8f8;
+			}
+		</style>
+	</head>
+	<body>
+	<!--Search_outer-->
+	<div class="search_outer">
+		<!--Navigation-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">
+				<h3>Parking</h3>
+			 </a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			 
+			 <!--Navbar-right-->
+				<ul class="nav navbar-nav navbar-right cl-effect-13 text-center">
+					<li><a href="#">My account </a></li>
+					<li><a href="#">Bookings</a></li>
+					<li><a href="#">Wallet</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-->
+		</nav>
+		
+		<!--account_details-->
+		<div class="container" id="credit-card-summary">
+			<div class="row">
+			<div class="col-lg-8 col-md-6 col-sm-6">
+				<section class="account_details card_details">
+					<h3>Let's get parking! Complete your reservation</h3>
+					<hr>
+					<div class="parking_reservation">
+						<div class="parking_time">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="parking_entry">
+										<img src="images/right_arrow.png" width="25" />
+										<span>Park anytime after</span>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="entry_time">
+										<i class="fa fa-clock-o"></i>
+										<span>02:00 AM</span>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="entry_date">
+										<i class="fa fa-calendar-check-o"></i>
+										<span>TUE,JAN 24</span>
+									</div>
+								</div>
+								<div class="col-lg-2">
+									<div class="edit">
+										<i class="fa fa-pencil"></i>
+										<span><a href="#reservation_time" data-toggle="modal">edit</a></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="parking_entry">
+										<img src="images/left_arrow.png" width="25" />
+										<span>Exit anytime before</span>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="entry_time">
+										<i class="fa fa-clock-o"></i>
+										<span>02:00 AM</span>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="entry_date">
+										<i class="fa fa-calendar-check-o"></i>
+										<span>WED,JAN 25</span>
+									</div>
+								</div>
+								<div class="col-lg-2">
+									<div class="edit">
+										<i class="fa fa-pencil"></i>
+										<span><a href="#reservation_time" data-toggle="modal">edit</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h3>Account information</h3>
+					<hr>
+					<p>Logged in as munish@mailinator.com</p>
+					<h3>Select your payment type</h3>
+					<hr>
+					<img src="images/creditcards.png" width="220"alt="img" />
+					<div class="button-radio">
+						<div class="radio radio-info radio-inline">
+							<input type="radio" id="inlineRadio1yes" value="option1" name="radioInline" checked  onclick="javascript:yesnoCheck();">
+							<label for="inlineRadio1">Stripe </label>
+						</div>
+						<div class="radio radio-info radio-inline">
+							<input type="radio" id="inlineRadio1no" value="option1" name="radioInline"  onclick="javascript:yesnoCheck();">
+							<label for="inlineRadio1">Paypal</label>
+						</div>
+					</div>
+					
+					<!--paypal_payment-->
+					<div id="paypal_payment">
+						<a href="#">
+							<img src="images/paypal.png" alt="paypal_img" width="200"/>
+						</a>
+						<p>Click the above button to proceed to payment</p>
+					</div>
+					
+					<!--Stripe_payment-->
+					<div id="stripe_payment">
+						<div>
+							
+							<!--card_number-->
+							<div class="form-group col-lg-6 col-sm-6">
+								<label>Card number</label>
+								<input type="text" class="form-control" />
+							</div>
+							
+							<!--Expiration-->
+							<div class="form-group col-lg-4 col-sm-4">
+								<label>Expiration (MM/YY)</label>
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						
+						<!--Security-code-->
+						<div class="security_code">
+							<div class="form-group col-lg-4 col-sm-4">
+								<label>Security Code</label>
+								<input type="number" class="form-control" />
+							</div>
+						</div>
+						
+						<!--Update-btn-->
+						<div class="update_changes">
+							<button type="submit" class="center"><i class="fa fa-lock"></i> &nbsp; Update changes</button>
+							<button type="submit" class="center">Cancel</button>
+						</div>
+					</div>
+				</section>
+			</div>
+			
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="parking_ticket">
+					<section class="account_details text-center">
+						<img src="images/boarding_pass.png" width="50" />
+						<p>Complete your purchase and you'll get an email with your ParkZone Pass containing simple instructions and directions to your happy space.</p>
+						<h3>Your Selected Parking</h3>
+						<div class="parking_slot">
+							<div class="text-overlay">
+								<div class="text-center">
+									<strong>1177 Fifteenth St NW</strong><br>
+									<span>Loews Madison Hotel (DC) - Valet</span>
+								</div>
+							</div>
+						</div>
+						
+						<span class="text-left category_img">
+							<img src="images/parking-png.png" alt="img" width="48" />
+							<img src="images/credit-card.png" alt="img" width="48"/>
+							<img src="images/traffic-light.png" alt="img" width="48"/>
+							<img src="images/clock-icon.png" alt="img" width="45" />
+						</span>
+						
+						<div class="order_total text-left clearfix">
+						
+							<h3>ORDER TOTAL
+								<span class="pull-right">$ 59 </span>
+							</h3>
+							
+						</div>
+						
+					</section>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- Modal -->
+			<div class="modal fade" id="reservation_time" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header  text-center">
+					<h4 class="modal-title " id="myModalLabel">LET'S MODIFY YOUR CURRENT RESERVATION</h4>
+						<p class="lead">TODAY 12:30   TODAY 3:30 PM</p>
+				  </div>
+				  <div class="modal-body">
+					<!--choose_date_time-->
+					<div class="choose_date_time">
+						<p class="lead">
+						Select a new time and date for your booking, pricing may vary
+						</p>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="pick_date_time">
+									<label for="dtp_input2" class=" control-label">CheckIn Date </label>
+									<div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+										<input class="form-control" size="16" type="text" value="" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+									<input type="hidden" id="dtp_input2" value="2017-01-11"><br>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="pick_date_time">
+									<label for="dtp_input3" class=" control-label">CheckIn Time </label>
+									<div class="input-group date form_time " data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+										<input class="form-control" size="16" type="text" value="" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+									</div>
+									<input type="hidden" id="dtp_input3" value="15:20"><br>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="pick_date_time">
+									<label for="dtp_input2" class=" control-label">CheckOut Date </label>
+									<div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+										<input class="form-control" size="16" type="text" value="" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+									<input type="hidden" id="dtp_input2" value=""><br>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="pick_date_time">
+									<label for="dtp_input3" class=" control-label">CheckOut Time </label>
+									<div class="input-group date form_time " data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+										<input class="form-control" size="16" type="text" value="" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+										<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+									</div>
+									<input type="hidden" id="dtp_input3" value=""><br>
+								</div>
+							</div>
+							<div class="submit_btn text-center">
+								<button type="button" class="center" id="check_avail">CHECK AVAILABILITY</button>
+							</div> 
+							<div class="text-center">
+								<a data-dismiss="modal">Close</a>
+							</div>
+						</div>
+					</div>
+					
+					<!--check_availability-->
+					<div class="check_slot_availability">
+						<p class="lead">
+							Please confirm your modified reservation below.
+						</p>
+						<div class="address_banner text-center">
+							<p>
+								<i class="fa fa-map-marker"></i> 1177 Fifteenth St NW, Washington, DCTODAY 12:30 PM TO TOMORROW 12:30 PM 
+								<a id="edit_avail">&nbsp; <i class="fa fa-pencil"></i> edit</a>
+							</p>
+						</div>
+						<div class="submit_btn text-center">
+								<button type="button" class="center">CONTINUE TO CHECKOUT</button>
+							</div> 
+							<div class="text-center">
+								<a data-dismiss="modal">Close</a>
+							</div>
+					</div>
+				  </div>
+				  <!--<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				  </div>-->
+				</div>
+			  </div>
+			</div>
+		
+	</div><!--search_outer-->
+	</body>
+	
+	<!--js-->
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#check_avail").click(function(){
+				$(".check_slot_availability").show();
+				$(".choose_date_time").hide();
+			});
+			$("#edit_avail").click(function(){
+				$(".check_slot_availability").hide();
+				$(".choose_date_time").show();
+			});
+		});
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+		<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+
+	<!--radio-btn-switch-over-->
+	<script>
+		function yesnoCheck() {
+		if (document.getElementById('inlineRadio1no').checked) {
+			document.getElementById('paypal_payment').style.display = 'block';
+			document.getElementById('stripe_payment').style.display = 'none';
+		}
+		else document.getElementById('paypal_payment').style.display = 'none';
+		
+		if (document.getElementById('inlineRadio1yes').checked) {
+			document.getElementById('stripe_payment').style.display = 'block';
+			document.getElementById('paypal_payment').style.display = 'none';
+		}
+		else document.getElementById('stripe_payment').style.display = 'none';
+	}
+
+	</script>
+</html>

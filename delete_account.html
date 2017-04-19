@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add card info</title>
+		
+		<!--External css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/build.css">
+		
+		<!--Google-font-->
+		<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+		
+	</head>
+	<body>
+	<!--Search_outer-->
+	<div class="search_outer">
+		<!--Navigation-->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Brand</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				 <form class="navbar-form navbar-left">
+					<div class="input-group">
+						<input type="search" class="form-control" placeholder="where are you going?">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
+				</form>
+			  </ul>
+			 <!--Navbar-right-->
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MY ACCOUNT <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">SETTINGS</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">MY ORDER</a></li>
+				  </ul>
+				</li>
+				<li><a href="#">LOG OUT</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-->
+		</nav>
+		
+		<!--account_details-->
+		<section class="account_details delete_account">
+			<h2>Are you sure you want to delete your account?</h2>
+			<p class="lead">
+				All your information including your reservations and account history will be lost. You will forfeit any money paid for pending reservations. Once this occurs, there is no way to rollback if you change your mind. You might be trying to just change notification preference instead. 
+			</p>
+			
+			<p>
+				If you have any questions, please contact support@brand.com instead. 	
+			</p>
+			<p>
+				Are you sure you want to continue?
+			</p>
+			<p>
+				<button type="submit" class="btn btn-danger">Confirm</button>
+				<button type="submit" class="btn btn-default">Cancel</button>
+			</p>
+		</section>
+	</div><!--search_outer-->
+	</body>
+	
+	<!--js-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</html>

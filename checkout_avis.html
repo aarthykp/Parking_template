@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>checkout</title>
+		
+		<!--External css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		
+		<!--internal css-->
+		<style>
+		body
+		{
+			font-family: 'Nunito', sans-serif;
+			background: #f8f8f8;
+		}
+		.checkout_inner .checkout_car_rent_details .list-group-item
+			{
+				border:none;
+			}
+			/*.checkout_inner .checkout_car_rent_details li.list-group-item span:last-child
+			{
+				font-size: 20px;
+			}*/
+			.checkout_inner .checkout_car_details .media
+			{
+				border-right:1px solid #ddd;
+			}
+			.checkout_inner .addons_outer
+			{
+				margin: 20px 0px;
+				border-top: 1px solid #ddd;
+				padding-top: 30px;
+			}
+			.checkout_inner .addons_outer .media
+			{
+				margin:10px 0px;
+				/*border-bottom:1px solid #ddd;*/
+			}
+			.checkout_inner .addons_outer .media:hover img
+			{
+				width:65px;
+			}
+			.checkout_inner .addons_outer .media-heading h3
+			{
+				margin-top:0px;
+				line-height: 35px;
+			}
+			.checkout_inner .addons_outer .media-body .btn
+			{
+				border-radius:0px;
+				background-image: -ms-linear-gradient(top,#fff 0,#d7d7d7 100%);
+				background-image: -moz-linear-gradient(top,#fff 0,#d7d7d7 100%);
+				background-image: -o-linear-gradient(top,#fff 0,#d7d7d7 100%);
+				background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100,#d7d7d7));
+				background-image: -webkit-linear-gradient(top,#fff 0,#d7d7d7 100%);
+				background-image: linear-gradient(to bottom,#fff 0,#d7d7d7 100%);
+			}
+			.checkout_inner .addons_outer .media-body .btn:hover
+			{
+				-webkit-box-shadow: 2.5px 2.5px 0 0 #c7c7c7;
+				-moz-box-shadow: 2.5px 2.5px 0 0 #c7c7c7;
+				box-shadow: 2.5px 2.5px 0 0 #c7c7c7;
+			}
+			.checkout_inner .addons_outer .media-body .checkbox
+			{
+				margin:0px;
+			}
+			.checkout_inner .addons_outer .media-body p
+			{
+				line-height: 25px;
+				font-size: 15px;
+			}
+			.checkout_inner .container-fluid
+			{
+				background:#fff;
+				    padding: 20px 70px;
+			}
+			.navbar-default
+			{
+				margin-bottom:0px;
+			}
+			.checkout_car_rent_details .indent_para
+			{
+				text-indent:20px;
+				
+			}
+			.checkout_car_rent_details .nested_ul .list-group-item
+			{
+				padding-right:0px;
+				padding-top:3px;
+				padding-bottom:2px;
+			}
+			.checkout_car_rent_details .nested_heading
+			{
+				display: inline-block;
+				padding-bottom: 4px;
+			}
+			.checkout_car_rent_details .estimated_fare
+			{
+				font-size: 20px;
+				font-weight: 800;
+				color: #d6202f;
+			}
+			.checkout_car_rent_details .detailed_ul
+			{
+				display:none;
+			}
+			.checkout_car_rent_details .see_ul,
+			.checkout_car_rent_details .close_outer
+			{
+				cursor:pointer;
+				color:#d6202f;
+				font-size:16px;
+			}
+			.checkout_car_rent_details .close_outer
+			{
+				font-size: 20px;
+				padding: 20px 0px;
+			}
+			.checkout_inner .container-fluid .col-lg-4
+			{
+				position: fixed;
+				right: 26px;
+			}
+			@media(max-width: 768px)
+			{
+				.checkout_inner .checkout_car_details .media
+				{
+					border-bottom:1px solid #ddd;
+					border-right:none;
+					padding-bottom: 15px;
+					marign-bottom: 15px;
+				}
+				.checkout_inner .container-fluid
+				{
+					padding:20px 10px;
+				}
+				.checkout_inner .addons_outer
+				{
+					border-top: none; 
+					 padding-top: 5px;
+				}
+				.checkout_inner .container-fluid .col-lg-4
+				{
+					position:static;
+				}
+			}
+		</style>
+	</head>
+	<body>
+	
+	<div class="checkout_outer">
+		<!--navbar-->
+		<nav class="navbar navbar-default">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Log In</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-->
+		</nav>
+		<!--checkout_inner-->
+		
+		<section class="checkout_inner">
+			<div class="container-fluid">
+				<div class="">
+					<div class="col-lg-8 col-sm-8 col-xs-12">
+						<div class="checkout_car_details">
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iXskBZ" width="500" alt="img" class="media-object img-responsive"/>
+								</a>
+								<div class="media-body">
+									<h3>Intermediate SUV</h3>
+									<b>Ford Escape	or Similar</b>
+								</div>
+							</div>
+						</div>
+						<div class="addons_outer">
+							<p class="lead"><b>Protections & Coverages</b></p>
+							<!--media-->
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iiIsx1" alt="img" width="60" class="media-object img-responsive" />
+								</a>
+								<div class="media-body">
+									<span class="pull-right">
+											<button type="button" class="btn btn-default">
+												<div class="checkbox">
+													<label>
+													  <input type="checkbox">$ 28.99/Day
+													</label>
+												  </div>
+											</button>
+										</span>
+									<div class="media-heading">
+										<h3>Loss Damage Waiver (LDW) </h3>
+									</div>
+									<p>Your solid back-up plan. With LDW, you're protected if your personal insurance or credit card doesn't cover you for losses from a stolen or damaged rental.</p>
+								</div>
+							</div>
+							<hr>
+							<!--media-->
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iiIsx1" alt="img" width="60" class="media-object img-responsive" />
+								</a>
+								<div class="media-body">
+									<span class="pull-right">
+											<button type="button" class="btn btn-default">
+												<div class="checkbox">
+													<label>
+													  <input type="checkbox">$ 28.99/Day
+													</label>
+												  </div>
+											</button>
+										</span>
+									<div class="media-heading">
+										<h3>Loss Damage Waiver (LDW) </h3>
+									</div>
+									<p>Your solid back-up plan. With LDW, you're protected if your personal insurance or credit card doesn't cover you for losses from a stolen or damaged rental.</p>
+								</div>
+							</div>
+							<hr>
+							<!--media-->
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iiIsx1" alt="img" width="60" class="media-object img-responsive" />
+								</a>
+								<div class="media-body">
+									<span class="pull-right">
+											<button type="button" class="btn btn-default">
+												<div class="checkbox">
+													<label>
+													  <input type="checkbox">$ 28.99/Day
+													</label>
+												  </div>
+											</button>
+										</span>
+									<div class="media-heading">
+										<h3>Loss Damage Waiver (LDW) </h3>
+									</div>
+									<p>Your solid back-up plan. With LDW, you're protected if your personal insurance or credit card doesn't cover you for losses from a stolen or damaged rental.</p>
+								</div>
+							</div>
+							<hr>
+							<!--media-->
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iiIsx1" alt="img" width="60" class="media-object img-responsive" />
+								</a>
+								<div class="media-body">
+									<span class="pull-right">
+											<button type="button" class="btn btn-default">
+												<div class="checkbox">
+													<label>
+													  <input type="checkbox">$ 28.99/Day
+													</label>
+												  </div>
+											</button>
+										</span>
+									<div class="media-heading">
+										<h3>Loss Damage Waiver (LDW) </h3>
+									</div>
+									<p>Your solid back-up plan. With LDW, you're protected if your personal insurance or credit card doesn't cover you for losses from a stolen or damaged rental.</p>
+								</div>
+							</div>
+							<hr>
+							<!--media-->
+							<div class="media">
+								<a class="pull-left" href="javascript:void(0);">
+									<img src="http://bit.ly/2iiIsx1" alt="img" width="60" class="media-object img-responsive" />
+								</a>
+								<div class="media-body">
+									<span class="pull-right">
+											<button type="button" class="btn btn-default">
+												<div class="checkbox">
+													<label>
+													  <input type="checkbox">$ 28.99/Day
+													</label>
+												  </div>
+											</button>
+										</span>
+									<div class="media-heading">
+										<h3>Loss Damage Waiver (LDW) </h3>
+									</div>
+									<p>Your solid back-up plan. With LDW, you're protected if your personal insurance or credit card doesn't cover you for losses from a stolen or damaged rental.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-sm-4 col-xs-12">
+						<div class="checkout_car_rent_details clearfix">
+							<ul class="list-group outer_ul">
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b>Base Rate</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right"></span><b>Mileage: Unlimited</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b>Rental Options</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b>Discount Codes</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b>Fees & Taxes</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right estimated_fare">$147.23</span><b>Estimated Total</b>
+								</li>
+							</ul>
+							<ul class="list-group detailed_ul">
+								<li class="list-group-item" style="padding-bottom:0px;">
+									<span class="pull-right">$111.00</span><b class="nested_heading">Base Rate</b>
+									<p class="indent_para">No. of Days: 2</p>
+								</li>
+								<li class="list-group-item" style="padding-top:0px;">
+									<span class="pull-right"></span><b>Mileage: Unlimited</b>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b class="nested_heading">Rental Options</b>
+									<ul class="list-unstyled nested_ul">
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span><b>Equipment & Services</b>
+										</li>
+										<li class="list-group-item">
+											None Selected
+										</li>
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span><b>Protections & Coverages</b>
+										</li>
+										<li class="list-group-item">
+											None Selected
+										</li>
+									</ul>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b class="nested_heading">Discount Codes</b>
+									<ul class="list-unstyled nested_ul">
+										<li class="list-group-item">
+											<b>Coupon</b>:<span>&nbsp;NA</span>
+										</li>
+										
+										<li class="list-group-item">
+											<b>AWD</b>:<span>&nbsp;NA</span>
+										</li>
+										<li class="list-group-item">
+											<b>Rate Code</b>:<span>&nbsp;NA</span>
+										</li>
+									</ul>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$111.00</span><b class="nested_heading">Fees & Taxes</b>
+									<ul class="list-unstyled nested_ul">
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span>Concession Recovery Fee (11.11%)
+										</li>
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span>Customer Facility Charge - 2.50/day
+										</li>
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span>Energy Recovery Fee - 0.60/day
+										</li>
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span>Vehicle License Fee - 0.34/day
+										</li>
+										<li class="list-group-item">
+											<span class="pull-right">$111.00</span>Total Tax
+										</li>
+									</ul>
+								</li>
+								<li class="list-group-item">
+									<span class="pull-right">$147.23</span><b>Estimated Total</b>
+								</li>
+								<p class="pull-right close_outer"><i class="fa fa-times"></i>&nbsp; close</p>
+							</ul>
+							<p class="pull-right see_ul"><i class="fa fa-pencil"></i>&nbsp;  View rental details</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+	</div><!--checkout_outer-->
+	</body>
+	<!--js-->
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.see_ul').click(function(){
+				$('.detailed_ul').show();
+				$('.outer_ul').hide();
+				$('.see_ul').hide();
+			});
+			$('.close_outer').click(function(){
+				$('.detailed_ul').hide();
+				$('.outer_ul').show();
+				$('.see_ul').show();
+			});
+		});
+	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.rateit.js"></script>
+
+</html>

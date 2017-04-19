@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Search</title>
+		
+		<!--External css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" /><!--Google font-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+		<!--internal css-->
+		<style>
+			html,body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				
+			  }
+			  body
+			  {
+				overflow: hidden;
+				font-family: 'Montserrat', sans-serif;
+				background: #f8f8f8;
+				margin-top: 2em;
+			  }
+			  @media(max-width: 768px)
+			  {
+				body
+				  {
+					overflow-y: visible;
+				  }
+			  }
+			   #map
+			   {
+				height: 740px;
+				width:100%;
+			   }
+			   
+		</style>
+	</head>
+	<body>
+	
+	<div class="search_outer">
+	 
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">
+				<h3>Parking</h3>
+			 </a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				 <form class="navbar-form navbar-left">
+					<div class="input-group">
+						<input type="search" class="form-control" placeholder="where are you going?">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
+				</form>
+			  </ul>
+			 
+			 <ul class="nav navbar-nav navbar-right cl-effect-13 text-center">
+					<li><a href="#">My account </a></li>
+					<li><a href="#">Bookings</a></li>
+					<li><a href="#">Wallet</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<section class="search_inner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-md-4" style="padding:0px;">
+						<div class="map_category">
+							<!--parking-type-->
+							<div class="parking-type clearfix">
+								<span class="parking-type-btns">
+									<span>Parking type:</span>
+									<span>
+										<a href="#">Daily</a>
+									</span>
+									<span>
+										<a href="#">Reserve</a>
+									</span>
+									<span>
+										<a href="#">Monthly</a>
+									</span>
+									<span>
+										<a href="#">Street</a>
+									</span>
+								</span>
+								<button type="button" class="center btn-block">Daily</button>
+								<span class="sort_by">
+									<!-- Single button -->
+									<div class="btn-group">
+									  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Filter <span class="caret"></span>
+									  </a>
+									  <ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									  </ul>
+									</div>
+									<!-- Single button -->
+									<div class="btn-group pull-right">
+									  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<b>SORT BY: </b>Most popular<span class="caret"></span>
+									  </a>
+									  <ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									  </ul>
+									</div>
+								</span>
+							</div>
+							<!--scroll_box-->
+							<div class="scroll_box">
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp; 
+											<img src="images/traffic-light.png" width="25"/>&nbsp; 
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object" />
+										<span class="badge has-feeback red">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp; 
+											<img src="images/traffic-light.png" width="25"/>&nbsp; 
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object" />
+										<span class="badge has-feeback orange">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp; 
+											<img src="images/traffic-light.png" width="25"/>&nbsp; 
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object" />
+										<span class="badge has-feeback red">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp; 
+											<img src="images/traffic-light.png" width="25"/>&nbsp; 
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp; 
+											<img src="images/traffic-light.png" width="25"/>&nbsp; 
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div>
+								<div class="media">
+									<a href="#" class="pull-left">
+										<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+										<span class="badge has-feeback green">23 % Full</span>
+									</a>
+									<div class="media-body clearfix">
+										<h5 class="media-heading">
+											Service park Santander Roma
+											<small>
+												<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+											</small>
+										</h5>
+										<p class="help-block">Rua Roma 501 - Lapa</p>
+										<p class="help-block">São Paulo, SP 05050</p>
+										<p class="help-block">0.76 miles - 16 minute walk</p>
+										<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+									</div>
+								</div><div class="media">
+								<a href="#" class="pull-left">
+									<img src="http://bit.ly/2hMHXzd" alt="img" class="media-object"/>
+									<span class="badge has-feeback green">23 % Full</span>
+								</a>
+								<div class="media-body clearfix">
+									<h5 class="media-heading">
+										Service park Santander Roma
+										<small>
+											<button type="button" class="btn btn-default pull-right">RS: 80.00</button>
+										</small>
+									</h5>
+									<p class="help-block">Rua Roma 501 - Lapa</p>
+									<p class="help-block">São Paulo, SP 05050</p>
+									<p class="help-block">0.76 miles - 16 minute walk</p>
+									<span class="detailed_img">
+											<img src="images/75905.png" width="29"/>&nbsp;
+											<img src="images/traffic-light.png" width="25"/>&nbsp;
+											<img src="images/credit-card.png" width="25"/>
+										</span>
+								</div>
+							</div>
+
+							</div>
+							<!--no-matching-data-->
+							<!--<div class="no-matching-data">
+								<h3>
+									We can't seem to ﬁnd any matching parking nearby.
+								</h3>
+								<p>
+									That doesn't mean there's no parking here, we just don't have recent data for this area.
+
+								</p>
+								<p>
+									Try changing filter or searching in a different area.
+								</p>
+							</div>-->
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-8" style="padding:0px;">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div><!--search_outer-->
+	</body>
+	<!--js-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	 <script>
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5,
+          center: {lat: -28.024, lng: 140.887}
+        });
+
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+      var locations = [
+        {lat: -31.563910, lng: 147.154312},
+        {lat: -33.718234, lng: 150.363181},
+        {lat: -33.727111, lng: 150.371124},
+        {lat: -33.848588, lng: 151.209834},
+        {lat: -33.851702, lng: 151.216968},
+        {lat: -34.671264, lng: 150.863657},
+        {lat: -35.304724, lng: 148.662905},
+        {lat: -36.817685, lng: 175.699196},
+        {lat: -36.828611, lng: 175.790222},
+        {lat: -37.750000, lng: 145.116667},
+        {lat: -37.759859, lng: 145.128708},
+        {lat: -37.765015, lng: 145.133858},
+        {lat: -37.770104, lng: 145.143299},
+        {lat: -37.773700, lng: 145.145187},
+        {lat: -37.774785, lng: 145.137978},
+        {lat: -37.819616, lng: 144.968119},
+        {lat: -38.330766, lng: 144.695692},
+        {lat: -39.927193, lng: 175.053218},
+        {lat: -41.330162, lng: 174.865694},
+        {lat: -42.734358, lng: 147.439506},
+        {lat: -42.734358, lng: 147.501315},
+        {lat: -42.735258, lng: 147.438000},
+        {lat: -43.999792, lng: 170.463352}
+      ]
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVrq3ENHFxgb8dewejTXek-9vahlOfmkw&callback=initMap">
+    </script>
+	<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+		<script>
+  $(document).ready(function() {
+  
+	var nice = $("html").niceScroll({cursorborder:"",boxzoom:true});  // The document page (body)
+    
+    $(".scroll_box").niceScroll({cursorborder:"",boxzoom:true}); // First scrollable DIV
+	
+
+  });
+</script>
+</html>

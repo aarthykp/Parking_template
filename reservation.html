@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--meta-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Reservation</title>
+		
+		<!--External css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/rateit.css" rel="stylesheet">
+		
+		<!--Google-font-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+		<!--internal css-->
+		<style>
+			body
+			{
+				background-image: url("images/gay-street-map.jpg");
+				background-size:cover;
+				background-repeat:no-repeat;
+				-webkit-animation:zoom 5s infinite;
+				animation:zoom 10s infinite; 
+				height:100%;
+				font-family: 'Montserrat', sans-serif;
+				
+			}
+			@media(max-width:991px)
+			{
+				body
+				{
+					background-repeat:repeat;
+				}
+			}
+			 #map 
+			{
+				height: 220px;
+				width: 220px;
+			}
+			@-webkit-keyframes zoom{
+				0%
+				{
+					background-size:100%;
+				}
+				50%{
+					background-size:115%;
+				}
+				100%
+				{
+					background-size:100%;
+				}
+			}
+			@keyframes zoom{
+				0%
+				{
+					background-size:100%;
+				}
+				50%{
+					background-size:115%;
+				}
+				100%
+				{
+					background-size:100%;
+				}
+			} 
+		</style>
+	</head>
+	<body>
+	<!--Reservation_outer-->
+	<div class="reservation_outer">
+		<!--Navigation-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">
+				<h3>Parking</h3>
+			 </a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			 
+			 <!--Navbar-right-->
+				<ul class="nav navbar-nav navbar-right cl-effect-13 text-center">
+					<li><a href="#">My account </a></li>
+					<li><a href="#">Bookings</a></li>
+					<li><a href="#">Wallet</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-->
+		</nav>
+		
+		<!--reservation_inner-->
+			<section class="reservation_inner_outer text-center">
+				<div class="container">
+					<!--<h2>My Reservations</h2>-->
+					<div class="reservation_inner text-center">
+						<i class="fa fa-map-marker fa-5x"></i>
+						<h3>You haven't made any parking reservations, yet.</h3>
+						<p class="lead">Park your car in the marked place</p>
+						<button type="submit" class="center">Start Booking</button>
+					</div>
+					
+					<!--reservation_table-->
+					<div class="reservation_table">
+						<h3>Reservation Slot</h3>
+						<div class="table-responsive">
+							<table class="table">
+								<tr>
+									<th>#</th>
+									<th>Parking Slot</th>
+									<th>your parking type</th>
+									<th>Parking address</th>
+									<th>Checkin and checkout</th>
+									<th>Fare</th>
+									<th>Review</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									
+									<!--parking_slot-table-data-->
+									<td>
+										<div class="parking_slot">
+											<div id="map">
+										</div>
+									</td>
+									
+									<!--Parking_type-table-data-->
+									<td>
+										<div class="parking_type">
+											<p>Self parking</p>
+										</div>
+									</td>
+									
+									<!--Parking_address-table-data-->
+									<td>
+										<div class="parking_address">
+											<span>
+												1776 G St NW <br>
+												Washington, DC 20006, US
+											</span>
+										</div>
+									</td>
+									
+									<!--checkin_and_checkout-table-data-->
+									<td>
+										<div class="checkin_and_checkout">
+											<p>CheckIn date and time</p>
+											<span>10/2/2017</span>
+											<span>4.20PM</span><br/>
+											<p class="checkout">CheckOut date and time</p>
+											<span>24/2/2017</span>
+											<span>10.00AM</span>
+										</div>
+									</td>
+									
+									<!--Fare-table-data-->
+									<td>
+										<div class="fare">
+											$21.00
+										</div>
+									</td>
+									
+									<!--Rating-table-data-->
+									<td>
+										<div class="review">
+											<div class="rateit" data-rateit-value="3.5" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+											<br><a href="review.html">Write a review</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						</div>
+					</div>
+			</section>
+	</div><!--reservation_outer-->
+	</body>
+	<!--js-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.rateit.js"></script>
+	 <script>
+      function initMap() {
+        var uluru = {lat: 12.9716, lng: 77.5946};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 20,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVrq3ENHFxgb8dewejTXek-9vahlOfmkw&libraries=visualization&callback=initMap">
+    </script>
+
+</html>
